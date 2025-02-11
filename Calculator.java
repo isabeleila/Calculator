@@ -23,8 +23,13 @@ public class Calculator{
             float product = num1 * num2;
             System.out.println("The product of: " + num1 + " * " + num2 + " = " + product);
         }else if(answer.equals("divide")){
+            if(num2 == 0){
+                System.out.println("Error: Divide by Zero");
+            }
+            else{
             float quotient = num1/num2;
             System.out.println("The quotient for: " + num1 + "/" + num2 + " = " + quotient);
+            }
         }else{
             System.out.println("Please enter a valid response.");
         }
