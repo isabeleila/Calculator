@@ -10,9 +10,24 @@ public class Calculator{
         System.out.println("Enter your second whole number: ");
         int num2 = scan.nextInt();
 
-        int sum = num1 + num2;
-        System.out.println("The sum of: " + num1 + " + " + num2 + " = " + sum);
+        System.out.println("Would you like to add or subtract your numbers? Enter in add or subtract.");
+        String answer = scan.next();
+
+        if(answer.equals("add")){
+            int sum = num1 + num2;
+            System.out.println("The sum of: " + num1 + " + " + num2 + " = " + sum);
+        } else if(answer.equals("subtract")){
+            int diff = num1 - num2;
+            System.out.println("The difference of: " + num1 + " - " + num2 + " = " + diff);
+        } else{
+            System.out.println("Please enter a valid response.");
+        }
 
         scan.close();
     }
+
+        
+        
+       
 }
+    
