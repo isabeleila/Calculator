@@ -10,7 +10,7 @@ public class Calculator{
         System.out.println("Enter your second whole number: ");
         int num2 = scan.nextInt();
 
-        System.out.println("Would you like to add or subtract your numbers? Enter in add or subtract.");
+        System.out.println("Would you like to add, subtract, multiply or divide? Enter in add, subtract, multiply, divide.");
         String answer = scan.next();
 
         if(answer.equals("add")){
@@ -19,7 +19,13 @@ public class Calculator{
         } else if(answer.equals("subtract")){
             int diff = num1 - num2;
             System.out.println("The difference of: " + num1 + " - " + num2 + " = " + diff);
-        } else{
+        } else if(answer.equals("multiply")){
+            int product = num1 * num2;
+            System.out.println("The product of: " + num1 + " * " + num2 + " = " + product);
+        }else if(answer.equals("divide")){
+            int quotient = num1/num2;
+            System.out.println("The quotient for: " + num1 + "/" + num2 + " = " + quotient);
+        }else{
             System.out.println("Please enter a valid response.");
         }
 
